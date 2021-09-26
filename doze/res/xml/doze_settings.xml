@@ -15,11 +15,14 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceScreen 
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <SwitchPreference
         android:key="always_on_display"
         android:disableDependentsState="true"
+        android:layout="@layout/dot_preference_full_alone_card"
         android:icon="@drawable/ic_aod"
         android:title="@string/ambient_display_always_on_title"
         android:summary="@string/ambient_display_always_on_summary"
@@ -27,11 +30,14 @@
 
     <PreferenceCategory
         android:key="pickup_sensor"
-        android:title="@string/pickup_sensor_title">
+        app:allowDividerAbove="false"
+        android:title="@string/pickup_sensor_title"
+        android:layout="@layout/dot_preference_category">
 
         <ListPreference
             android:key="gesture_pick_up_type"
             android:defaultValue="0"
+            android:layout="@layout/dot_preference_full_alone_card"
             android:icon="@drawable/ic_pickup"
             android:title="@string/pick_up_gesture_title"
             android:summary="%s"
@@ -42,11 +48,14 @@
 
     <PreferenceCategory
         android:key="proximity_sensor"
-        android:title="@string/proximity_sensor_title">
+        app:allowDividerAbove="false"
+        android:title="@string/proximity_sensor_title"
+        android:layout="@layout/dot_preference_category">
 
         <SwitchPreference
             android:key="gesture_pocket"
             android:defaultValue="false"
+            android:layout="@layout/dot_preference_full_alone_card"
             android:icon="@drawable/ic_pocket"
             android:title="@string/pocket_gesture_title"
             android:summary="@string/pocket_gesture_summary" />

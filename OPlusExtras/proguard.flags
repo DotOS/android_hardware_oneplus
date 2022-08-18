@@ -1,3 +1,3 @@
--keep class org.evolution.oplus.OPlusExtras.** {
+-keep class org.dot.oplus.OPlusExtras.** {
   *;
 }
